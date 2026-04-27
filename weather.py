@@ -35,7 +35,7 @@ def fetch_weather(zip_codes, api_key):
 
 
 def append_to_csv(rows, filepath=CSV_PATH):
-    file_exists = os.path.isfile(filepath)
+    file_exists = os.path.isfile(filepath) and os.path.getsize(filepath) > 0
     with open(filepath, "a", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
         if not file_exists:

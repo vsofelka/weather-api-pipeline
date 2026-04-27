@@ -4,7 +4,7 @@ import pytest
 from unittest.mock import patch, MagicMock
 
 
-def make_mock_response(zip_code, city, region, date, max_f, min_f, condition):
+def make_mock_response(city, region, date, max_f, min_f, condition):
     mock = MagicMock()
     mock.raise_for_status.return_value = None
     mock.json.return_value = {
@@ -26,7 +26,7 @@ def make_mock_response(zip_code, city, region, date, max_f, min_f, condition):
 def test_fetch_weather_returns_correct_row():
     from weather import fetch_weather
 
-    mock_resp = make_mock_response("90045", "Los Angeles", "California", "2026-04-27", 72.0, 58.0, "Sunny")
+    mock_resp = make_mock_response("Los Angeles", "California", "2026-04-27", 72.0, 58.0, "Sunny")
     with patch("weather.requests.get", return_value=mock_resp):
         rows = fetch_weather(["90045"], "fake-key")
 
@@ -45,7 +45,7 @@ def test_fetch_weather_returns_correct_row():
 def test_fetch_weather_calls_raise_for_status():
     from weather import fetch_weather
 
-    mock_resp = make_mock_response("90045", "Los Angeles", "California", "2026-04-27", 72.0, 58.0, "Sunny")
+    mock_resp = make_mock_response("Los Angeles", "California", "2026-04-27", 72.0, 58.0, "Sunny")
     with patch("weather.requests.get", return_value=mock_resp):
         fetch_weather(["90045"], "fake-key")
 
