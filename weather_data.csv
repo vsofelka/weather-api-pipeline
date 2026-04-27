@@ -139,3 +139,23 @@ zip_code,city,region,date,max_temp_f,min_temp_f,condition
 02101,Boston,Massachusetts,2026-04-17,77.9,52.2,Patchy rain nearby
 02101,Boston,Massachusetts,2026-04-18,51.3,46.2,Overcast 
 02101,Boston,Massachusetts,2026-04-19,59.8,48.6,Patchy rain nearby
+90045,Los Angeles,California,2026-04-27,65.3,52.5,Sunny
+10001,New York,New York,2026-04-27,71.1,41.0,Sunny
+60601,Chicago,Illinois,2026-04-27,60.8,52.3,Moderate rain
+98101,Seattle,Washington,2026-04-27,59.4,46.9,Overcast
+33101,Miami,Florida,2026-04-27,87.1,68.7,Sunny
+77001,Houston,Texas,2026-04-27,85.8,74.1,Overcast
+85001,Phoenix,Arizona,2026-04-27,84.4,56.7,Sunny
+19101,Philadelphia,Pennsylvania,2026-04-27,74.5,40.3,Sunny
+78201,San Antonio,Texas,2026-04-27,97.2,75.0,Patchy rain nearby
+92101,San Diego,California,2026-04-27,67.6,52.9,Patchy rain nearby
+75201,Dallas,Texas,2026-04-27,99.3,73.8,Overcast
+95101,San Jose,California,2026-04-27,69.1,45.9,Sunny
+78701,Austin,Texas,2026-04-27,93.6,73.8,Patchy rain nearby
+30301,Atlanta,Georgia,2026-04-27,84.6,61.3,Sunny
+28201,Charlotte,North Carolina,2026-04-27,78.4,50.9,Partly Cloudy
+80201,Denver,Colorado,2026-04-27,54.0,40.0,Patchy rain nearby
+37201,Nashville,Tennessee,2026-04-27,89.6,60.1,Sunny
+97201,Portland,Oregon,2026-04-27,64.2,43.7,Sunny
+89101,Las Vegas,Nevada,2026-04-27,80.6,49.8,Sunny
+02101,Boston,Massachusetts,2026-04-27,56.3,38.8,Sunny
