@@ -8,8 +8,6 @@ on:
 jobs:
   fetch-weather:
     runs-on: ubuntu-latest
-    retry:
-      max-attempts: 2
 
     steps:
       - name: Checkout
@@ -26,7 +24,17 @@ jobs:
       - name: Run weather pipeline
         env:
           WEATHERAPI_KEY: ${{ secrets.WEATHERAPI_KEY }}
-        run: python weather.py
+        run: |
+          for attempt in 1 2; do
+            python weather.py && break
+            if [ $attempt -lt 2 ]; then
+              echo "Attempt $attempt failed, retrying in 30s..."
+              sleep 30
+            else
+              echo "All attempts failed."
+              exit 1
+            fi
+          done
 
       - name: Commit and push updated CSV
         run: |
