@@ -1,69 +1,54 @@
+import csv
+import os
 import requests
-import json
-import time
-import pandas as pd
 
-API_KEY = "4b9faa112a694bc4b66175155261304"
+API_URL = "https://api.weatherapi.com/v1/forecast.json"
 
-api_url = "https://api.weatherapi.com/v1/forecast.json"
-
-zip_codes = [
-    "90045",  # Los Angeles, CA
-    "10001",  # New York, NY
-    "60601",  # Chicago, IL
-    "98101",  # Seattle, WA
-    "33101",  # Miami, FL
-    "77001",  # Houston, TX
-    "85001",  # Phoenix, AZ
-    "19101",  # Philadelphia, PA
-    "78201",  # San Antonio, TX
-    "92101",  # San Diego, CA
-    "75201",  # Dallas, TX
-    "95101",  # San Jose, CA
-    "78701",  # Austin, TX
-    "30301",  # Atlanta, GA
-    "28201",  # Charlotte, NC
-    "80201",  # Denver, CO
-    "37201",  # Nashville, TN
-    "97201",  # Portland, OR
-    "89101",  # Las Vegas, NV
-    "02101",  # Boston, MA
+ZIP_CODES = [
+    "90045", "10001", "60601", "98101", "33101", "77001", "85001",
+    "19101", "78201", "92101", "75201", "95101", "78701", "30301",
+    "28201", "80201", "37201", "97201", "89101", "02101",
 ]
 
-results = []
+CSV_PATH = "weather_data.csv"
+FIELDNAMES = ["zip_code", "city", "region", "date", "max_temp_f", "min_temp_f", "condition"]
 
-for zip_code in zip_codes:
-    params = {
-        "key": API_KEY,
-        "q": zip_code,
-        "days": 7
-    }
 
-    response = requests.get(api_url, params=params)
-    data = response.json()
-
-    city = data["location"]["name"]
-    region = data["location"]["region"]
-
-    for day in data["forecast"]["forecastday"]:
-        results.append({
+def fetch_weather(zip_codes, api_key):
+    rows = []
+    for zip_code in zip_codes:
+        params = {"key": api_key, "q": zip_code, "days": 1}
+        response = requests.get(API_URL, params=params)
+        response.raise_for_status()
+        data = response.json()
+        day = data["forecast"]["forecastday"][0]
+        rows.append({
             "zip_code": zip_code,
-            "city": city,
-            "region": region,
+            "city": data["location"]["name"],
+            "region": data["location"]["region"],
             "date": day["date"],
             "max_temp_f": day["day"]["maxtemp_f"],
             "min_temp_f": day["day"]["mintemp_f"],
             "condition": day["day"]["condition"]["text"],
         })
+    return rows
 
-    print(f"{zip_code} - {city}, {region}: {len(data['forecast']['forecastday'])} days fetched")
 
-    time.sleep(1)
+def append_to_csv(rows, filepath=CSV_PATH):
+    file_exists = os.path.isfile(filepath)
+    with open(filepath, "a", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
+        if not file_exists:
+            writer.writeheader()
+        writer.writerows(rows)
 
-df = pd.DataFrame(results)
 
-print(df.to_string(index=False))
-print(f"\nShape: {df.shape[0]} rows x {df.shape[1]} columns")
+def main():
+    api_key = os.environ["WEATHERAPI_KEY"]
+    rows = fetch_weather(ZIP_CODES, api_key)
+    append_to_csv(rows)
+    print(f"Appended {len(rows)} rows to {CSV_PATH}")
 
-df.to_csv("weather_data.csv", index=False)
-print("Saved to weather_data.csv")
+
+if __name__ == "__main__":
+    main()
