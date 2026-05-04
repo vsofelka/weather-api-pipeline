@@ -279,3 +279,23 @@ zip_code,city,region,date,max_temp_f,min_temp_f,condition
 97201,Portland,Oregon,2026-05-03,93.6,55.6,Sunny
 89101,Las Vegas,Nevada,2026-05-03,93.4,62.1,Sunny
 02101,Boston,Massachusetts,2026-05-03,56.1,42.3,Overcast
+90045,Los Angeles,California,2026-05-04,66.6,56.7,Patchy rain nearby
+10001,New York,New York,2026-05-04,77.9,43.5,Sunny
+60601,Chicago,Illinois,2026-05-04,75.9,52.5,Patchy rain nearby
+98101,Seattle,Washington,2026-05-04,81.1,54.3,Sunny
+33101,Miami,Florida,2026-05-04,89.6,72.1,Patchy rain nearby
+77001,Houston,Texas,2026-05-04,85.8,59.0,Sunny
+85001,Phoenix,Arizona,2026-05-04,84.9,66.6,Sunny
+19101,Philadelphia,Pennsylvania,2026-05-04,75.7,44.2,Sunny
+78201,San Antonio,Texas,2026-05-04,87.4,60.1,Sunny
+92101,San Diego,California,2026-05-04,65.3,56.1,Patchy rain nearby
+75201,Dallas,Texas,2026-05-04,86.7,59.9,Sunny
+95101,San Jose,California,2026-05-04,64.4,49.3,Overcast
+78701,Austin,Texas,2026-05-04,83.6,58.8,Sunny
+30301,Atlanta,Georgia,2026-05-04,83.3,45.3,Sunny
+28201,Charlotte,North Carolina,2026-05-04,83.1,45.1,Sunny
+80201,Denver,Colorado,2026-05-04,70.7,49.2,Patchy rain nearby
+37201,Nashville,Tennessee,2026-05-04,85.6,50.0,Sunny
+97201,Portland,Oregon,2026-05-04,82.8,56.3,Sunny
+89101,Las Vegas,Nevada,2026-05-04,84.7,56.6,Sunny
+02101,Boston,Massachusetts,2026-05-04,75.4,39.2,Sunny
