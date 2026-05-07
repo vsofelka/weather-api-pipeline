@@ -2,6 +2,7 @@ import os
 import time
 import requests
 import pandas as pd
+from dotenv import load_dotenv
 
 API_URL = "https://api.weatherapi.com/v1/forecast.json"
 
@@ -34,6 +35,7 @@ def fetch_weather(zip_codes, api_key):
 
 
 def main():
+    load_dotenv()
     api_key = os.environ["WEATHERAPI_KEY"]
     results = fetch_weather(ZIP_CODES, api_key)
 
