@@ -91,3 +91,25 @@ def test_main_raises_on_missing_api_key():
         os.environ.pop("WEATHERAPI_KEY", None)
         with pytest.raises(KeyError):
             main()
+
+
+def test_main_appends_rows_with_fetched_on(tmp_path, monkeypatch):
+    # Each daily run adds its rows to the CSV (never overwrites) and stamps
+    # them with the day they were fetched, so the file becomes a history
+    import weather
+
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("WEATHERAPI_KEY", "fake-key")
+    rows = [{"zip_code": "90045", "city": "Los Angeles", "region": "California",
+             "date": "2026-04-27", "max_temp_f": 72.0, "min_temp_f": 58.0, "condition": "Sunny"}]
+    monkeypatch.setattr(weather, "fetch_weather", lambda zips, key: [dict(r) for r in rows])
+
+    weather.main()
+    weather.main()
+
+    with open(tmp_path / "weather_data.csv", newline="") as f:
+        result = list(csv.DictReader(f))
+
+    assert len(result) == 2
+    assert list(result[0].keys())[0] == "fetched_on"
+    assert all(r["fetched_on"] for r in result)

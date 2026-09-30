@@ -23,7 +23,11 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r requirements.txt pytest
+
+      # Stop before touching the data if the code is broken
+      - name: Run tests
+        run: python -m pytest -q
 
       - name: Run weather pipeline
         env:
