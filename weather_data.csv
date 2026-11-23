@@ -12270,3 +12270,63 @@ fetched_on,zip_code,city,region,date,max_temp_f,min_temp_f,condition
 2026-11-22,02101,Boston,Massachusetts,2026-11-22,59.2,46.1,Overcast
 2026-11-22,02101,Boston,Massachusetts,2026-11-23,63.3,45.2,Partly Cloudy
 2026-11-22,02101,Boston,Massachusetts,2026-11-24,43.7,33.3,Sunny
+2026-11-23,90045,Los Angeles,California,2026-11-23,66.6,53.0,Sunny
+2026-11-23,90045,Los Angeles,California,2026-11-24,70.5,53.6,Overcast
+2026-11-23,90045,Los Angeles,California,2026-11-25,71.3,56.0,Sunny
+2026-11-23,10001,New York,New York,2026-11-23,66.8,48.6,Sunny
+2026-11-23,10001,New York,New York,2026-11-24,47.7,38.0,Sunny
+2026-11-23,10001,New York,New York,2026-11-25,44.5,34.0,Partly Cloudy
+2026-11-23,60601,Chicago,Illinois,2026-11-23,40.9,33.3,Partly Cloudy
+2026-11-23,60601,Chicago,Illinois,2026-11-24,39.0,31.0,Overcast
+2026-11-23,60601,Chicago,Illinois,2026-11-25,43.2,35.3,Overcast
+2026-11-23,98101,Seattle,Washington,2026-11-23,50.2,41.3,Overcast
+2026-11-23,98101,Seattle,Washington,2026-11-24,48.4,43.0,Light drizzle
+2026-11-23,98101,Seattle,Washington,2026-11-25,51.9,46.0,Light drizzle
+2026-11-23,33101,Miami,Florida,2026-11-23,77.9,67.6,Cloudy
+2026-11-23,33101,Miami,Florida,2026-11-24,79.0,68.4,Overcast
+2026-11-23,33101,Miami,Florida,2026-11-25,76.5,71.7,Light rain
+2026-11-23,77001,Houston,Texas,2026-11-23,67.0,54.1,Sunny
+2026-11-23,77001,Houston,Texas,2026-11-24,59.9,50.7,Partly Cloudy
+2026-11-23,77001,Houston,Texas,2026-11-25,58.7,44.2,Sunny
+2026-11-23,85001,Phoenix,Arizona,2026-11-23,66.0,52.0,Sunny
+2026-11-23,85001,Phoenix,Arizona,2026-11-24,71.4,51.8,Sunny
+2026-11-23,85001,Phoenix,Arizona,2026-11-25,73.2,56.0,Overcast
+2026-11-23,19101,Philadelphia,Pennsylvania,2026-11-23,66.9,51.1,Partly Cloudy
+2026-11-23,19101,Philadelphia,Pennsylvania,2026-11-24,50.1,37.9,Sunny
+2026-11-23,19101,Philadelphia,Pennsylvania,2026-11-25,47.8,33.8,Overcast
+2026-11-23,78201,San Antonio,Texas,2026-11-23,63.0,49.5,Sunny
+2026-11-23,78201,San Antonio,Texas,2026-11-24,54.4,44.8,Partly Cloudy
+2026-11-23,78201,San Antonio,Texas,2026-11-25,59.9,39.8,Sunny
+2026-11-23,92101,San Diego,California,2026-11-23,68.8,54.1,Sunny
+2026-11-23,92101,San Diego,California,2026-11-24,73.4,51.8,Partly Cloudy
+2026-11-23,92101,San Diego,California,2026-11-25,72.6,55.0,Overcast
+2026-11-23,75201,Dallas,Texas,2026-11-23,55.9,45.1,Sunny
+2026-11-23,75201,Dallas,Texas,2026-11-24,47.8,43.6,Patchy rain nearby
+2026-11-23,75201,Dallas,Texas,2026-11-25,52.4,39.0,Sunny
+2026-11-23,95101,San Jose,California,2026-11-23,57.8,42.5,Partly Cloudy
+2026-11-23,95101,San Jose,California,2026-11-24,62.2,46.3,Overcast
+2026-11-23,95101,San Jose,California,2026-11-25,65.4,51.1,Sunny
+2026-11-23,78701,Austin,Texas,2026-11-23,60.3,48.6,Sunny
+2026-11-23,78701,Austin,Texas,2026-11-24,51.7,43.1,Sunny
+2026-11-23,78701,Austin,Texas,2026-11-25,58.2,39.8,Sunny
+2026-11-23,30301,Atlanta,Georgia,2026-11-23,67.4,54.2,Partly Cloudy
+2026-11-23,30301,Atlanta,Georgia,2026-11-24,61.3,46.9,Sunny
+2026-11-23,30301,Atlanta,Georgia,2026-11-25,51.6,44.1,Overcast
+2026-11-23,28201,Charlotte,North Carolina,2026-11-23,70.2,55.7,Mist
+2026-11-23,28201,Charlotte,North Carolina,2026-11-24,56.6,43.9,Sunny
+2026-11-23,28201,Charlotte,North Carolina,2026-11-25,48.0,39.3,Light rain
+2026-11-23,80201,Denver,Colorado,2026-11-23,39.9,28.9,Overcast
+2026-11-23,80201,Denver,Colorado,2026-11-24,49.6,28.3,Sunny
+2026-11-23,80201,Denver,Colorado,2026-11-25,48.4,29.5,Partly Cloudy
+2026-11-23,37201,Nashville,Tennessee,2026-11-23,56.0,40.5,Sunny
+2026-11-23,37201,Nashville,Tennessee,2026-11-24,51.1,36.6,Overcast
+2026-11-23,37201,Nashville,Tennessee,2026-11-25,53.3,43.6,Light drizzle
+2026-11-23,97201,Portland,Oregon,2026-11-23,48.0,40.5,Overcast
+2026-11-23,97201,Portland,Oregon,2026-11-24,47.4,42.5,Patchy rain nearby
+2026-11-23,97201,Portland,Oregon,2026-11-25,54.2,44.1,Light drizzle
+2026-11-23,89101,Las Vegas,Nevada,2026-11-23,60.1,43.9,Sunny
+2026-11-23,89101,Las Vegas,Nevada,2026-11-24,61.7,44.1,Sunny
+2026-11-23,89101,Las Vegas,Nevada,2026-11-25,62.8,46.4,Overcast
+2026-11-23,02101,Boston,Massachusetts,2026-11-23,65.5,46.3,Sunny
+2026-11-23,02101,Boston,Massachusetts,2026-11-24,44.8,34.0,Sunny
+2026-11-23,02101,Boston,Massachusetts,2026-11-25,43.3,31.1,Sunny
